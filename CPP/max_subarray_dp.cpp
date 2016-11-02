@@ -29,7 +29,7 @@ int max_non_contiguous_subarray(vector<int> A) {
     return dp[A.size() - 1];
 }
 
-int main() {
+int test() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int T;
     cout << "enter" << endl;
