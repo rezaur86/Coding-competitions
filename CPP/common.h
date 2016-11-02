@@ -13,6 +13,7 @@
 #include <vector>
 #include <unordered_map>
 #include <set>
+#include <stack>
 #include <iostream>
 #include <algorithm>
 using namespace std;
