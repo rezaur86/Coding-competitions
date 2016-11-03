@@ -59,11 +59,12 @@ public:
             if (pq.empty()) break;
             int u = pq.top().first;
             int du = pq.top().second;
+            finished[u] = true;
             pq.pop();
             for(auto p : adj[u]) {
                 int v = p.first;
                 int w = p.second;
-                if (shortest_path[v] > shortest_path[u] + w) {
+                if (!finished[v] && shortest_path[v] > shortest_path[u] + w) {
                     shortest_path[v] = shortest_path[u] + w;
                     pq.push(make_pair(v, shortest_path[v]));
                 }
