@@ -16,6 +16,14 @@
 using namespace std;
 
 int partition(vector<int>& a, int& swap_count, int low, int high) {
+	/*
+	Two important points from lomuto partitioning is,
+	1.) At the end of each recursion the element at the wall position is now
+		placed correctly in the final sorted array (i.e) this element is sorted now.
+	2.) Apart from the element in wall position, if the start position and
+		pivot position is same during the start of the recursion then it is also
+		placed correctly in the final sorted array.
+	*/
     int i = low;
     int pivot = a[high];
     while(i < high) {
